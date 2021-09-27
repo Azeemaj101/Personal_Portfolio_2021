@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- ==== Required meta tags ==== -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- ==== Bootstrap CSS ==== -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
+
+    <!-- ===== CSS ===== -->
+    <link rel="stylesheet" href="public/adminPage.css">
+    <link rel="stylesheet" href="public/adminPage.scss">
+    <link rel="stylesheet" href="public/editProject.css">
+
+    <link rel="icon" href="pictures/title_1.png" type="image/icon type">
+    <title>Blogs</title>
+</head>
+
+<body id="body-pd">
+    <% if(chk == 1){ %>
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <strong>Server Error!</strong> Please try again later..
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        <% } %>
+
+            <!-- ==== Modal ==== -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content modal_color text-light">
+                        <div class="modal-header">
+                            <h5 class="modal-title d-flex align-items-center" id="exampleModalLabel">
+                                <ion-icon name="create"></ion-icon>Edit</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form action="/Update_blog" method="POST" enctype="multipart/form-data">
+                                <input type="hidden" name="id" id="id">
+                                <div class="mb-3">
+                                    <input type="text" placeholder="Title" name="title" id="title" required minlength="5" class="form-control">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="">Description</label>
+                                    <textarea class="form-control" name="desc" id="desc" placeholder="Description" id="floatingTextarea"></textarea>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="">Optional</label>
+                                    <input type="file" name="picture1" class="form-control">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="">Paragraph One</label>
+                                    <textarea class="form-control" name="para1" id="para1" required minlength="5" placeholder="Paragraph One" id="floatingTextarea"></textarea>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="">Optional</label>
+                                    <input type="file" name="picture2" class="form-control">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="">Paragraph Two</label>
+                                    <textarea class="form-control" name="para2" id="para2" required minlength="5" placeholder="Paragraph Two" id="floatingTextarea"></textarea>
+                                </div>
+
+                                <div class="modal-footer d-flex justify-content-center">
+                                    <button type="button" class="btn btn-outline-danger rounded-pill" data-bs-dismiss="modal">Close</button>
+                                    <button type="submit" class="btn btn-outline-light rounded-pill">Submit</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ==== All Code Start ==== -->
+            <div class="l-navbar1" id="navbar">
+                <nav class="nav1">
+                    <div>
+                        <div class="nav__brand">
+                            <ion-icon name="menu-outline" class="nav__toggle" id="nav-toggle"></ion-icon>
+                            <a href="https://github.com/Azeemaj101" target="_blank" class="nav__logo hor d-flex align-items-center">
+                                <ion-icon name="logo-github"></ion-icon>&nbspGitHub</a>
+                        </div>
+                        <div class="nav__list1 ">
+                            <a href="../admin" class="nav__link1">
+                                <ion-icon name="home-outline" class="nav__icon1"></ion-icon>
+                                <span class="nav__name1">Dashboard</span>
+                            </a>
+                            <a href="mailto:azeemaj101@gmail.com" class="nav__link1">
+                                <ion-icon name="mail-outline" class="nav__icon1"></ion-icon>
+                                <span class="nav__name1">Email</span>
+                            </a>
+                            <a href="#" class="nav__link1 active">
+                                <ion-icon name="pie-chart-outline" class="nav__icon1"></ion-icon>
+                                <span class="nav__name1">Blogs</span>
+                            </a>
+                            <a href="https://www.google.com/" target="_blank" class="nav__link1">
+                                <ion-icon name="logo-google" class="nav__icon1"></ion-icon>
+                                <span class="nav__name1">Google</span>
+                            </a>
+                            <a href="../admin" class="nav__link1">
+                                <ion-icon name="settings-outline" class="nav__icon1"></ion-icon>
+                                <span class="nav__name1">Settings</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <a href="#" onclick="window.location=' /logout'" class="nav__link1">
+                        <ion-icon name="log-out-outline" class="nav__icon1"></ion-icon>
+                        <span class="nav__name1">Log Out</span>
+                    </a>
+                </nav>
+            </div>
+            <header class="fs-2 text-light mb-3 d-flex align-items-center justify-content-center">
+                <ion-icon name="options"></ion-icon> Blogs
+            </header>
+            <main class="d-flex justify-content-center flex-wrap me-2">
+                <% for(var i=0; i<session.UserData[0].blog.length; i++) {%>
+                    <div class="card text-white mb-3 ml-2 other_cards1 col1 " style="overflow-x: scroll;">
+                        <div class="container mt-2 ">
+                            <div class="row ">
+                                <div class="col "> <img src="pictures/13.png " class="card-img-top " alt="... " style="width: 45px; ">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body inner_cards ">
+                            <h5 class="card-title title1">
+                                <%- session.UserData[0].blog[i].title %>
+                            </h5>
+                            <div class="dynamic">
+                                <p class="card-text para1">
+                                    <%- session.UserData[0].blog[i].desc %>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="text-center mb-2">
+                            <button class="btnm" onclick="deleteProject('<%- i %>')">Delete</button>
+                            <button value='<%- session.UserData[0].blog[i].title %>~<%- session.UserData[0].blog[i].desc %>~<%- session.UserData[0].blog[i].para1 %>~<%- session.UserData[0].blog[i].para2 %>' class="btnm" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="EditContent( this.value,'<%- i %>')">Edit</button>
+                        </div>
+                    </div>
+                    <% } %>
+                        <% if(session.UserData[0].blog.length == 0){%>
+                            <div class="bg-danger px-5 py-3 rounded-1">Empty!!</div>
+                            <%}%>
+            </main>
+            <div class="text-center mt-5 mb-3">
+                <button class="btn btn-outline-light rounded-pill" onclick="window.history.back()">Go Back</button>
+            </div>
+
+
+            <!-- ==== BootStrap Link ==== -->
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+            <!-- ===== IONICONS ===== -->
+            <script type="module" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.esm.js"></script>
+
+            <!-- ===== MAIN JS ===== -->
+            <script src="public/adminPage.js"></script>
+            <!-- <label for="">Paragraph One</label> -->
+            <script src="//cdn.ckeditor.com/4.16.2/standard/ckeditor.js"></script>
+            <script>
+                function EditContent(value, id) {
+                    let i = Number(id);
+                    var hEd = CKEDITOR.instances['desc'];
+                    var hEd1 = CKEDITOR.instances['para1'];
+                    var hEd2 = CKEDITOR.instances['para2'];
+                    if (hEd) {
+                        CKEDITOR.instances.desc.destroy();
+                    }
+                    if (hEd1) {
+                        CKEDITOR.instances.para1.destroy();
+
+                    }
+                    if (hEd2) {
+                        CKEDITOR.instances.para2.destroy();
+
+                    }
+                    let data = value.split("~");
+                    document.getElementById('id').value = i;
+                    document.getElementById('title').value = data[0];
+                    document.getElementById('desc').value = data[1];
+                    document.getElementById('para1').value = data[2];
+                    document.getElementById('para2').value = data[3];
+                    CKEDITOR.replace('desc');
+                    CKEDITOR.replace('para1');
+                    CKEDITOR.replace('para2');
+
+                }
+
+                function deleteProject(id) {
+                    console.log(Number(id));
+                    try {
+                        let url = `/deleteBlog/${Number(id)}`;
+                        fetch(url, {
+                            method: "DELETE",
+                            headers: {
+                                'Content-Type': 'application/json'
+                            },
+                            body: JSON.stringify()
+                        })
+                        setTimeout(() => {
+                            Mreload()
+                        }, 2000);
+                    } catch (err) {
+                        console.log(err);
+                    }
+                }
+
+                async function Mreload() {
+                    await location.reload();
+                }
+            </script>
+</body>
+
+</html>

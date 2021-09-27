@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js" integrity="sha512-UxP+UhJaGRWuMG2YC6LPWYpFQnsSgnor0VUF3BHdD83PS/pOpN+FYbZmrYN+ISX8jnvgVUciqP/fILOXDjZSwg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
+
+
+    <!-- Font Family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+
+    <!-- Style.css -->
+    <link rel="stylesheet" href="public/style.css">
+
+    <link rel="icon" href="pictures/title_1.png" type="image/icon type">
+    <title>M.Azeem Portfolio!</title>
+</head>
+
+<body>
+
+    <div id="loader">
+        <div class="d-flex justify-content-center align-items-center text-light" style="height: 100vh;">
+            <!-- <img src="pictures/load.gif" alt="" style="width: 15rem; height: 15rem;"> -->
+            <!-- <video src="pictures/load.mp4" autoplay controls muted id="myVideo" style="width: 100px; height: 100px;">
+                video not supported
+              </video> -->
+            <video width="220" height="220" muted autoplay="autoplay" playsinline id="myVideo">
+                <source src="pictures/load.mp4" type="video/mp4" />
+              </video>
+        </div>
+    </div>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-mainbg">
+        <!-- <nav class="navbar navbar-expand-lg navbar-mainbg" style="position:fixed; width: 100%; z-index: 1;"> -->
+        <!-- Logo -->
+        <a class="navbar-brand navbar-logo rounded-circle" href=""> <img src="pictures/10_1.png" class="card-img-top" alt="..." style="width: 163px;">
+        </a>
+        <!-- Collapse Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="fas fa-bars text-white"></i>
+    </button>
+        <!-- Links -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto">
+                <!-- For Styling -->
+                <div class="hori-selector">
+                    <div class="left"></div>
+                    <div class="right"></div>
+                </div>
+                <!-- Nav Links -->
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">
+                        <i class="fas fa-tachometer-alt">
+                  </i>Dashboard
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#About_me">
+                        <i class="fas fa-address-card"></i>About
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#Work">
+                        <i class="fab fa-codepen"></i>Work
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#Contact">
+                        <i class="far fa-id-badge"></i>Contact
+                    </a>
+                </li>
+                <li class="nav-item" style="cursor: pointer;">
+                    <a class="nav-link" onclick="window.location= '/blog' ">
+                        <i class="far fa-chart-bar ">
+                  </i>Blogs
+                    </a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link " href="/partials/Azeem-CV.pdf ">
+                        <i class="far fa-copy ">
+                  </i>Resume
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class=" ">
+        <div id="particles-js">
+        </div>
+
+        <div class="f-img d-flex justify-content-center align-items-center flex-column ">
+            <!-- <div class="content "> -->
+
+            <img src="<%- obj[0].Picture %>" class="card-img-top rounded-circle content" alt="... " style="width: 150px; height: 150px; ">
+            <div class="d-flex justify-content-center TypeJS_Text fw-bold p-3 ">
+                <div class="type "><span>I'm a&nbsp<span class="box "></span></span>
+                </div>
+
+            </div>
+            <div class="d-flex justify-content-center flex-wrap ani content1 " style="display: none; ">
+                <a href="https://www.linkedin.com/in/azeemaj101/ " class="content1 "><button class="btns px-1 py-1 mx-1 "> LINKED-IN</button></a>
+                <a href="/partials/Azeem-CV.pdf " class="content1 "><button class="btns px-1 py-1 mx-1 ">Resume</button></a>
+                <a class="content1 "><button class="btns px-1 py-1 mx-1 ">Views <%- obj[0].views %></button></a>
+                <a href="https://github.com/Azeemaj101 " class="content1 "><button class="btns px-1 py-1 mx-1 ">GITHUB</button></a>
+            </div>
+            <!-- </div> -->
+            <a href="#arrow_down">
+                <div class="arrow ">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </a>
+        </div>
+
+        <!-- ==== Birthday Alert ==== -->
+        <div class="alert alert-warning alert-dismissible fade show birthday" role="alert" style="background-color: #bc5935; color: white;">
+            <marquee behavior="" direction=""> <strong>Happy Birthday!</strong> I have checked all the goals that I set for myself on my last birthday. That is amazing. I am settling for nothing less than a special celebration to mark another year on earth. I just want to thank Allah for
+                adding another year to my life.</marquee>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+
+        <!-- ==== New year Alert ==== -->
+        <div class="alert alert-light alert-dismissible fade show new_year" role="alert" style="background-color: rgb(226, 21, 50); color: white;">
+            <marquee behavior="" direction=""> <strong>Happy New Year!</strong> May this year bring new happiness, new goals, new achievements, and a lot of new inspirations on your life. Wishing you a year fully loaded with happiness. Have a Happy New Year!</marquee>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+
+
+
+        <div class="text-light info_div p-2 pt-3 d-flex justify-content-center " id="About_me">
+            <div class="info_inner fs-5 d-flex justify-content-center flex-column " id="arrow_down">
+                <div>
+                    <p data-aos="fade-up " data-aos-anchor-placement="top-bottom " class="fs-5 ">
+                        Hi, my name is
+                    </p>
+                    <p data-aos="fade-up " data-aos-anchor-placement="top-bottom " class="fw-bold fs-2 ">
+                        Muhammad Azeem <br> I teach people how to code.
+                    </p>
+                    <p data-aos="fade-up " data-aos-anchor-placement="top-bottom " class="fs-6 w-75 ">
+                        A Tech enthusiast with a keen interest in Artificial Intelligence and Web Development (MEAN & MARN). An aspiring Data Scientist with a focus on Python for Machine Learning.
+                    </p>
+                    <div data-aos="fade-up " data-aos-anchor-placement="top-bottom " class="get-in-touch ">
+                        <a href="mailto:azeemaj101@gmail.com "><button class="p-2 mx-4 rounded ">Get In Touch</button></a>
+                    </div>
+
+                </div>
+                <div class="email_line "> <a href="mailto:azeemaj101@gmail.com " style="text-decoration: none; color: var(--white); " target="_blank " rel="noopener noreferrer "><span> Azeemaj101@gmail.com&nbsp &nbsp</span></a>
+                    <div class="inner_email "></div>
+                </div>
+                <div class="contact_logo text-center ">
+                    <div class="text-center logo_fixed fs-3 col-bg-5 ">
+                        <a href="https://github.com/Azeemaj101 " target="_blank " rel="noopener noreferrer "><i class="fab fa-github "></i></a>
+                        <a href="https://www.instagram.com/azeemaj101/ " target="_blank " rel="noopener noreferrer "><i class="fab fa-instagram "></i></a>
+                        <a href="https://www.linkedin.com/in/azeemaj101/ " target="_blank " rel="noopener noreferrer "><i class="fab fa-linkedin-in "></i></a>
+                        <a href="https://twitter.com/Azeemaj101 " target="_blank " rel="noopener noreferrer "><i class="fab fa-twitter "></i></a>
+                        <a href="mailto:azeemaj101@gmail.com " target="_blank " rel="noopener noreferrer "><i class="fas fa-envelope "></i></a>
+                    </div>
+                    &nbsp
+                    <div class="inner_logo "></div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="about_me py-2 d-flex justify-content-center align-items-center flex-wrap ">
+            <div class="about_content " style="width: 60rem; ">
+                <p data-aos="fade-up " data-aos-anchor-placement="top-bottom " class="fs-3 ">
+                    <span>01.</span> About Me
+                </p>
+
+                <p data-aos="fade-up " data-aos-anchor-placement="top-bottom " class="fs-6 ">
+                    Hello! I'm a student of <span class="mark">Computer science</span>, passionate about learning and exploring technology in the modern era, <span class="mark">Lahore PK</span>.
+                </p>
+                <p data-aos="fade-up " data-aos-anchor-placement="top-bottom " class="fs-6 pe-1" style="text-align: justify;text-justify: inter-word;">
+                    A <span class="mark">Web Developer</span> with a good grip on basic front-end development tools including HTML, CSS, Bootstrap, Javascript and ReactJS along with a strong grip on back-end <span class="mark">frameworks</span> NodeJS,
+                    Express, PHP, MySQL and MongoDB with extensive hands-on experience contributing to open-source codes. I'm also working on <span class="mark">Machine Learning</span> and training many datasets. Having a strong background in project
+                    management and excellent communication skills. I work on a variety of interesting and meaningful projects.</p>
+                <p data-aos="fade-up " data-aos-anchor-placement="top-bottom " class="fs-6 pe-1">
+                    I'm still studying for my undergraduate degree at <span class="mark">Lahore Garrison University</span> and have also done my first <span class="mark">internship at W-Group in AI</span>.
+                </p>
+                <p data-aos="fade-up " data-aos-anchor-placement="top-bottom " class="fs-6 ">
+                    Here are a few technologies I've been working with recently:
+                </p>
+                <div data-aos="fade-up " data-aos-anchor-placement="top-bottom " class="tool_list ">
+                    <ul>
+                        <li><span>Python</span>
+                        </li>
+                        <li><span>JavaScript</span>
+                        </li>
+                        <li><span>NodeJs</span>
+                        </li>
+                        <li><span>Express</span>
+                        </li>
+                        <li><span>ReactJS</span>
+                        </li>
+                        <li><span>HTML/CSS</span>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li><span>Data Analysis (Py)</span>
+                        </li>
+                        <li><span>MongoDB</span>
+                        </li>
+                        <li><span>MySql / MsSql</span>
+                        </li>
+                        <li><span>JAVA</span>
+                        </li>
+                        <li><span>PHP</span>
+                        </li>
+                        <li><span>C/C++</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div data-aos="fade-up " data-aos-anchor-placement="top-bottom " class="img_div mx-2 rounded ">
+                <img src="<%- obj[0].Picture %>" class="card-img-top my_pic rounded " alt="... " style="width: 15rem; ">
+            </div>
+        </div>
+        <div class="i_build " id="Work">
+            <p data-aos="fade-up " data-aos-anchor-placement="top-bottom " class="fs-3 ">
+                <span>02.</span> Some Things I’ve Built
+            </p>
+            <div data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" class=" media_Flex p-1 mb-3 ">
+                <div class="card bg-dark text-white inner_build ">
+                    <img src="pictures/1_1.jpeg " class="card-img " alt="... ">
+                    <div class="card-img-overlay opasity_color d-flex justify-content-center align-items-center ">
+                        <div class="content_build ">
+                            <p class="d-flex justify-content-end ">Featured Project</p>
+                            <p class="d-flex justify-content-end ">Covid-19 Dashboard</p>
+                            <p class="d-flex justify-content-end flex-wrap rounded ">This dashboard update cases for all Countries on regular basis.</p>
+                            <p class="d-flex justify-content-end flex-wrap rounded ">HTML/CSS &nbsp NodeJs/Express &nbsp Covid-API</p>
+                            <p class="d-flex justify-content-end flex-wrap px-1 rounded"><a href="https://github.com/Azeemaj101/Covid19_APP " target="_blank " rel="noopener noreferrer "><i class="fab fa-github fs-6"></i></a> &nbsp
+                                <a href="http://corona-cases-update.herokuapp.com/ " target="_blank " rel="noopener noreferrer "><i class="fas fa-sign-in-alt fs-6"></i></a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" class="media_Flex1 p-1 mb-3 ">
+                <div class=" text-white inner_build1 ">
+                    <img src="pictures/1_2.png " class="card-img " alt="... ">
+                    <div class="card-img-overlay opasity_color d-flex justify-content-center align-items-center ">
+                        <div class="content_build1 ">
+                            <p class="d-flex justify-content-start ">Featured Project</p>
+                            <p class="d-flex justify-content-start ">Sticky Notes Web App</p>
+                            <p class="d-flex justify-content-start flex-wrap rounded ">This web app saves all your records in the database with log in system sessions handling all CRUD system.</p>
+                            <p class="d-flex justify-content-start flex-wrap rounded ">HTML/CSS &nbsp NodeJs/Express &nbsp MongoDB/Atlas</p>
+                            <p class="d-flex justify-content-start flex-wrap px-1 rounded "><a href="https://github.com/Azeemaj101/Sticky_Notes-MongoDB-Express " target="_blank " rel="noopener noreferrer "><i class="fab fa-github fs-6"></i></a> &nbsp
+                                <a href="https://stickynotes102.herokuapp.com/ " target="_blank " rel="noopener noreferrer "><i class="fas fa-sign-in-alt fs-6"></i></a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" class=" media_Flex p-1 mb-3 ">
+                <div class="card bg-dark text-white inner_build ">
+                    <img src="pictures/1.png " class="card-img " alt="... ">
+                    <div class="card-img-overlay opasity_color d-flex justify-content-center align-items-center ">
+                        <div class="content_build ">
+                            <p class="d-flex justify-content-end ">Featured Project</p>
+                            <p class="d-flex justify-content-end ">Weather App For All Countries</p>
+                            <p class="d-flex justify-content-end flex-wrap rounded ">This web app shows current time with max/min weather and type of weather with a friendly user interface</p>
+                            <p class="d-flex justify-content-end flex-wrap rounded ">HTML/CSS &nbsp NodeJs/Express &nbsp OpenWeather-API</p>
+                            <p class="d-flex justify-content-end flex-wrap px-1 rounded "><a href="https://github.com/Azeemaj101/Weather_App " target="_blank " rel="noopener noreferrer "><i class="fab fa-github fs-6"></i></a> &nbsp
+                                <a href="http://weather-app-expressjs-101.herokuapp.com/ " target="_blank " rel="noopener noreferrer "><i class="fas fa-sign-in-alt fs-6"></i></a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" class="media_Flex1 p-1 mb-3 ">
+                <div class=" text-white inner_build1 ">
+                    <img src="pictures/1_3.jpeg " class="card-img " alt="... ">
+                    <div class="card-img-overlay opasity_color d-flex justify-content-center align-items-center ">
+                        <div class="content_build1 ">
+                            <p class="d-flex justify-content-start ">Featured Project</p>
+                            <p class="d-flex justify-content-start ">Namaz Timing Web App</p>
+                            <p class="d-flex justify-content-start flex-wrap rounded ">This web app show today or all month Namaz timing for every country with weather + Different time zone</p>
+                            <p class="d-flex justify-content-start flex-wrap rounded ">HTML/CSS &nbsp NodeJs/Express &nbsp API</p>
+                            <p class="d-flex justify-content-start flex-wrap px-1 rounded "><a href="https://github.com/Azeemaj101/Namaz_Timings_API " target="_blank " rel="noopener noreferrer "><i class="fab fa-github fs-6"></i></a> &nbsp
+                                <a href="https://namaz-timing102.herokuapp.com/ " target="_blank " rel="noopener noreferrer "><i class="fas fa-sign-in-alt fs-6"></i></a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" class=" media_Flex p-1 mb-3 ">
+                <div class="card bg-dark text-white inner_build ">
+                    <img src="pictures/1_5.jpeg " class="card-img " alt="... ">
+                    <div class="card-img-overlay opasity_color d-flex justify-content-center align-items-center ">
+                        <div class="content_build ">
+                            <p class="d-flex justify-content-end ">Featured Project</p>
+                            <p class="d-flex justify-content-end ">Blood Donation Web App</p>
+                            <p class="d-flex justify-content-end flex-wrap rounded ">This web app manages all users record, any user write their problem to Admin then admin approve those issues and display on the front page of a web app. Also a lot of functionality</p>
+                            <p class="d-flex justify-content-end flex-wrap rounded ">HTML/CSS &nbsp Bootstrap/PHP &nbsp MySql</p>
+                            <p class="d-flex justify-content-end flex-wrap px-1 rounded "><a href="https://github.com/Azeemaj101/Blood-Donation-WebApp-REDDROP " target="_blank " rel="noopener noreferrer "><i class="fab fa-github fs-6"></i></a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" class="media_Flex1 p-1 mb-3 ">
+                <div class=" text-white inner_build1 ">
+                    <img src="pictures/1_6.png " class="card-img " alt="... ">
+                    <div class="card-img-overlay opasity_color d-flex justify-content-center align-items-center ">
+                        <div class="content_build1 ">
+                            <p class="d-flex justify-content-start ">Featured Project</p>
+                            <p class="d-flex justify-content-start ">My Machine Learning Work</p>
+                            <p class="d-flex justify-content-start flex-wrap rounded ">Working on Numpay, Pandas, Matplotlib, Seaborn, Scikit learn, and ML Algorithms</p>
+                            <p class="d-flex justify-content-start flex-wrap rounded ">Python</p>
+                            <p class="d-flex justify-content-start flex-wrap px-1 rounded "><a href="https://github.com/Azeemaj101/Machine-Learning " target="_blank " rel="noopener noreferrer "><i class="fab fa-github fs-6"></i></a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Other Project -->
+        <div data-aos="fade-up" data-aos-duration="3000" class=" d-flex justify-content-center align-items-center flex-column outer_cards ">
+            <p class="fs-3 " style="color: var(--white); ">
+                Other Projects
+            </p>
+            <div class="d-flex justify-content-center align-items-center flex-wrap ">
+                <% for(var i=obj[0].projects.length-1; i>=0; i--) {%>
+                    <div class="card text-white mb-3 ml-2 other_cards col1 " style="overflow-x: scroll;">
+                        <div class="container mt-2 ">
+                            <div class="row ">
+                                <div class="col "> <img src="pictures/13.png " class="card-img-top " alt="... " style="width: 45px; ">
+                                </div>
+                                <div class="col d-flex justify-content-end align-items-center "><a href="<%- obj[0].projects[i].link %>" target="_blank " rel="noopener noreferrer "><i class="fab fa-github " ></i></a></div>
+                            </div>
+                        </div>
+                        <div class="card-body inner_cards d-flex align-items-start justify-content-start flex-column">
+                            <h5 class="card-title ">
+                                <%- obj[0].projects[i].title %>
+                            </h5>
+                            <div class="dynamic">
+
+                                <p class="card-text ">
+                                    <%- obj[0].projects[i].para %>
+                                </p>
+                                <p>
+                                    <%- obj[0].projects[i].language %>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <% } %>
+
+            </div>
+            <button class="btn rounded ">Show More</button>
+            <button class="btn1 rounded " onclick="less() ">Show Less</button>
+        </div>
+        <div data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" id="Contact" class="d-flex justify-content-center align-items-center flex-column m-5 p-4 ">
+            <p class="fs-6 " style="color: var(--border); ">
+                03. What’s Next?
+            </p>
+            <p class="fs-1 " style="color: var(--white); ">Get In Touch</p>
+            <p class="fs-6 text-center d-flex flex-wrap " style="color: var(--text-color); max-width: 24rem; min-width: 18rem; ">My inbox is always open. Whether you have a query or just want to say hi, I'll try my best to get back to you!</p>
+
+            <a href="mailto:azeemaj101@gmail.com " rel="noopener noreferrer " style="text-decoration: none; "><button class="btn2 rounded ">Say Hello</button></a>
+        </div>
+        <div class="text-center logo_buttom_mobile fs-3 ">
+            <a href="https://github.com/Azeemaj101 " target="_blank " rel="noopener noreferrer "><i class="fab fa-github "></i></a>
+            <a href="https://www.instagram.com/azeemaj101/ " target="_blank " rel="noopener noreferrer "><i class="fab fa-instagram "></i></a>
+            <a href="https://www.linkedin.com/in/azeemaj101/ " target="_blank " rel="noopener noreferrer "><i class="fab fa-linkedin-in "></i></a>
+            <a href="https://twitter.com/Azeemaj101 " target="_blank " rel="noopener noreferrer "><i class="fab fa-twitter "></i></a>
+            <a href="mailto:azeemaj101@gmail.com " target="_blank " rel="noopener noreferrer "><i class="fas fa-envelope "></i></a>
+        </div>
+
+    </main>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js " integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj " crossorigin="anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js " integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns " crossorigin="anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js " integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj " crossorigin="anonymous "></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js "></script>
+    <script src="public/typed.js "></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js "></script>
+    <script src="public/script.js "></script>
+    <script src="public/particles.js"></script>
+    <script src="public/app.js"></script>
+
+</body>
+
+</html>

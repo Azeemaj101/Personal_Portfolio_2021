@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- AOS -->
+    <!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> -->
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js" integrity="sha512-UxP+UhJaGRWuMG2YC6LPWYpFQnsSgnor0VUF3BHdD83PS/pOpN+FYbZmrYN+ISX8jnvgVUciqP/fILOXDjZSwg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
+
+
+    <!-- Font Family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+
+    <!-- Style.css -->
+    <link rel="stylesheet" href="../public/blogT.css">
+
+    <link rel="icon" href="pictures/title_1.png" type="image/icon type">
+    <title>Memories!</title>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-mainbg">
+        <!-- <nav class="navbar navbar-expand-lg navbar-mainbg" style="position:fixed; width: 100%; z-index: 1;"> -->
+        <!-- Logo -->
+        <a class="navbar-brand navbar-logo rounded-circle" href=""> <img src="../pictures/10_1.png" class="card-img-top" alt="..." style="width: 163px;">
+        </a>
+        <!-- Collapse Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="fas fa-bars text-white"></i>
+    </button>
+        <!-- Links -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto">
+                <!-- For Styling -->
+                <div class="hori-selector">
+                    <div class="left"></div>
+                    <div class="right"></div>
+                </div>
+                <!-- Nav Links -->
+                <li class="nav-item ">
+                    <a class="nav-link" href="../#">
+                        <i class="fas fa-tachometer-alt">
+                  </i>Dashboard
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../#About_me">
+                        <i class="fas fa-address-card"></i>About
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../#Work">
+                        <i class="fab fa-codepen"></i>Work
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../#Contact">
+                        <i class="far fa-id-badge"></i>Contact
+                    </a>
+                </li>
+                <li class="nav-item active" style="cursor: pointer;">
+                    <a class="nav-link" onclick="window.location= '/blog' ">
+                        <i class="far fa-chart-bar ">
+                  </i>Blogs
+                    </a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link " href="../partials/Azeem-CV.pdf ">
+                        <i class="far fa-copy ">
+                  </i>Resume
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class=" ">
+
+        <div class="text-light info_div p-2 pt-3 d-flex justify-content-center ">
+            <div class="email_line "> <a href="mailto:azeemaj101@gmail.com " style="text-decoration: none; color: var(--white); " target="_blank " rel="noopener noreferrer "><span> Azeemaj101@gmail.com&nbsp &nbsp</span></a>
+                <div class="inner_email "></div>
+            </div>
+            <div class="contact_logo text-center ">
+                <div class="text-center logo_fixed fs-3 col-bg-5 ">
+                    <a href="https://github.com/Azeemaj101 " target="_blank " rel="noopener noreferrer "><i class="fab fa-github "></i></a>
+                    <a href="https://www.instagram.com/azeemaj101/ " target="_blank " rel="noopener noreferrer "><i class="fab fa-instagram "></i></a>
+                    <a href="https://www.linkedin.com/in/azeemaj101/ " target="_blank " rel="noopener noreferrer "><i class="fab fa-linkedin-in "></i></a>
+                    <a href="https://twitter.com/Azeemaj101 " target="_blank " rel="noopener noreferrer "><i class="fab fa-twitter "></i></a>
+                    <a href="mailto:azeemaj101@gmail.com " target="_blank " rel="noopener noreferrer "><i class="fas fa-envelope "></i></a>
+                </div>
+                &nbsp
+                <div class="inner_logo "></div>
+            </div>
+        </div>
+        <p class="text-center fs-1 title" style="color: var(--white);">
+            Year in Review 2020
+        </p>
+        <div class="data_blog d-flex justify-content-center flex-column">
+            <div class="d-flex justify-content-center">
+                <img src="pictures/2020_1.jpeg" class="rounded" alt="">
+            </div>
+            <p class="ps-2 fs-5 mt-3 text-center">
+                2020 was a great year for me from both personal and professional perspectives. I started programming this year and start working on web development and Machine Learning. I achieved a lot of things this year some of them are listed below:
+            </p>
+
+            <ol>
+                <li class="fw-bold fs-5" style="color: var(--border);">
+                    <p class="fw-bold fs-5 mt-2" style="color: var(--white);">
+                        Python + Open CV
+                    </p>
+                    <div class="text-center">
+                        <img src="certificate/1.jpeg" class="rounded certificate1" alt="">
+                    </div>
+                </li>
+                <li class="fw-bold fs-5" style="color: var(--border);">
+                    <p class="fw-bold fs-5 mt-2" style="color: var(--white);">
+                        Rebortics Workshop
+                    </p>
+                    <div class="text-center">
+                        <img src="certificate/2.jpeg" class="rounded certificate" alt="">
+                    </div>
+                </li>
+                <li class="fw-bold fs-5" style="color: var(--border);">
+                    <p class="fw-bold fs-5 mt-2" style="color: var(--white);">
+                        MLSA Membership
+                    </p>
+                    <div class="text-center">
+                        <img src="certificate/3.jpeg" class="rounded certificate" alt="">
+                    </div>
+                </li>
+                <li class="fw-bold fs-5" style="color: var(--border);">
+                    <p class="fw-bold fs-5 mt-2" style="color: var(--white);">
+                        Workshop Interview RoadMap
+                    </p>
+                    <div class="text-center">
+                        <img src="certificate/4.jpeg" class="rounded certificate" alt="">
+                    </div>
+                </li>
+                <li class="fw-bold fs-5" style="color: var(--border);">
+                    <p class="fw-bold fs-5 mt-2" style="color: var(--white);">
+                        <span>
+                            Web Development
+                            <a href="https://www.coursera.org/account/accomplishments/verify/7RX745Q23PXD" target="_blank" rel="noopener noreferrer">
+                                <button class="p-1 mx-1 rounded go_back">verify</button>
+                            </a>
+                        </span>
+                    </p>
+                    <div class="text-center">
+                        <img src="certificate/5.jpeg" class="rounded certificate" alt="">
+                    </div>
+                </li>
+                <li class="fw-bold fs-5" style="color: var(--border);">
+                    <p class="fw-bold fs-5 mt-2" style="color: var(--white);">
+                        <span>
+                            Python Oop
+                            <a href="https://www.coursera.org/account/accomplishments/verify/6HHRPKQJFYGF" target="_blank" rel="noopener noreferrer">
+                                <button class="p-1 mx-1 rounded go_back">verify</button>
+                            </a>
+                        </span>
+                    </p>
+                    <div class="text-center">
+                        <img src="certificate/6.jpeg" class="rounded certificate" alt="">
+                    </div>
+                </li>
+                <li class="fw-bold fs-5" style="color: var(--border);">
+                    <p class="fw-bold fs-5 mt-2" style="color: var(--white);">
+                        <span>
+                            Python Django
+                            <a href="https://www.udemy.com/certificate/UC-3a78d993-e357-4675-929e-01564b455547/" target="_blank" rel="noopener noreferrer">
+                                <button class="p-1 mx-1 rounded go_back">verify</button>
+                            </a>
+                        </span>
+                    </p>
+                    <div class="text-center">
+                        <img src="certificate/7.jpeg" class="rounded certificate" alt="">
+                    </div>
+                </li>
+                <li class="fw-bold fs-5" style="color: var(--border);">
+                    <p class="fw-bold fs-5 mt-2" style="color: var(--white);">
+                        Workshop PNY
+                    </p>
+                    <div class="text-center">
+                        <img src="certificate/8.jpeg" class="rounded certificate" alt="">
+                    </div>
+                </li>
+                <li class="fw-bold fs-5" style="color: var(--border);">
+                    <p class="fw-bold fs-5 mt-2" style="color: var(--white);">
+                        <span>
+                            Wrokshop PowerShell
+                            <a href="https://verify.givemycertificate.com/verify/2005000611000092" target="_blank" rel="noopener noreferrer">
+                                <button class="p-1 mx-1 rounded go_back">verify</button>
+                            </a>
+                        </span>
+                    </p>
+                    <div class="text-center">
+                        <img src="certificate/9.jpeg" class="rounded certificate" alt="">
+                    </div>
+                </li>
+                <li class="fw-bold fs-5" style="color: var(--border);">
+                    <p class="fw-bold fs-5 mt-2" style="color: var(--white);">
+                        Wrokshop Zumo32U4
+                    </p>
+                    <div class="text-center">
+                        <img src="certificate/10.jpeg" class="rounded certificate" alt="">
+                    </div>
+                </li>
+                <li class="fw-bold fs-5" style="color: var(--border);">
+                    <p class="fw-bold fs-5 mt-2" style="color: var(--white);">
+                        Cyber Security
+                    </p>
+                    <div class="text-center">
+                        <img src="certificate/11.jpeg" class="rounded certificate" alt="">
+                    </div>
+                </li>
+            </ol>
+
+        </div>
+        <div class="text-center">
+            <button class="p-2 mx-4 rounded go_back m-5" onclick="history.back()">Go Back</button>
+        </div>
+    </main>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js " integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj " crossorigin="anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js " integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns " crossorigin="anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js " integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj " crossorigin="anonymous "></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js "></script>
+    <!-- <script src="https://unpkg.com/aos@next/dist/aos.js "></script> -->
+    <script src="../public/blogT.js "></script>
+
+</body>
+
+</html>

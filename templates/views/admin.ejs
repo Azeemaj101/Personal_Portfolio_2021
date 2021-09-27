@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300&display=swap');
+    </style>
+
+    <link rel="stylesheet" href="public/Admin.css">
+
+    <link rel="icon" href="pictures/title_1.png" type="image/icon type">
+    <title>Admin-Login</title>
+</head>
+
+<body>
+    <% if(chk == 1){ %>
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <strong>Wrong Password!</strong>Please go back don't try to do Something..
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        <% } %>
+            <div id="particles-js">
+            </div>
+            <main class="" id="main">
+                <div class="d-flex justify-content-end p-2" style="z-index: 1;">
+                    <button type="button" class="mrbtn fw-bold" onclick="window.location='/'" style="z-index: 1;">Portfolio</button>
+                </div>
+                <div style="height: 100vh;" class="d-flex flex-column justify-content-center align-items-center">
+                    <div class=" d-flex flex-column justify-content-center align-items-center text-white mb-3 innerDiv p-3" style="width: 21rem; height: 27rem;">
+                        <div class="my_img mb-1">
+                            <img src="pictures/4.jpg" class="card-img-top rounded-circle" alt="...">
+                        </div>
+                        <div class="login fw-bold mb-2">
+                            Login
+                        </div>
+                        <form action="/admin" method="POST">
+                            <div class="mb-3">
+                                <input type="text" class="one" name="username" required maxlength="25" minlength="4" placeholder="UserName" aria-describedby="emailHelp">
+                            </div>
+                            <div class="mb-3">
+                                <input type="password" maxlength="25" required minlength="4" class="two" name="password" placeholder="Password">
+                            </div>
+                            <div class="mb-3 form-switch">
+                                <input class="form-check-input" onChange=ab() type="checkbox" id="agreed"> <span id="text" class="text">Dark Mode</span>
+                            </div>
+                            <div class=" form-check text-center">
+                                <button type="submit" class="mbtn">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </main>
+
+            <!-- Optional JavaScript; choose one of the two! -->
+
+            <!-- Option 1: Bootstrap Bundle with Popper -->
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+
+            <!-- Option 2: Separate Popper and Bootstrap JS -->
+            <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+    -->
+            <script>
+                function ab() {
+                    if (document.getElementById("agreed").checked == true) {
+                        document.getElementById("main").classList.add("light");
+                        document.getElementsByClassName("login")[0].classList.add("login1");
+                        document.getElementsByClassName("innerDiv")[0].classList.add("innerDiv1");
+                        document.getElementsByClassName("one")[0].classList.add("one1");
+                        document.getElementsByClassName("two")[0].classList.add("two1");
+                        document.getElementsByClassName("text")[0].classList.add("text1");
+                        document.getElementsByClassName("mbtn")[0].classList.add("mbtn1");
+                        document.getElementsByClassName("mrbtn")[0].classList.add("mrbtn1");
+                        document.getElementById("text").innerText = "Light Mode";
+                        localStorage.setItem("key1", 1);
+                    } else {
+                        document.getElementById("main").classList.remove("light");
+                        document.getElementsByClassName("login")[0].classList.remove("login1");
+                        document.getElementsByClassName("innerDiv")[0].classList.remove("innerDiv1");
+                        document.getElementsByClassName("one")[0].classList.remove("one1");
+                        document.getElementsByClassName("two")[0].classList.remove("two1");
+                        document.getElementsByClassName("text")[0].classList.remove("text1");
+                        document.getElementsByClassName("mrbtn")[0].classList.remove("mrbtn1");
+                        document.getElementsByClassName("mbtn")[0].classList.remove("mbtn1");
+                        document.getElementById("text").innerText = "Dark Mode";
+                        localStorage.setItem("key1", 0);
+                        // document.getElementById("agreed").checked == false
+                    }
+                }
+
+                function red() {
+                    window.location.href = "/signup"
+                }
+                window.onload = (event) => {
+                    localStorage.setItem("key", 2765);
+
+                }
+                if (localStorage.getItem("key1") == 1) {
+                    document.getElementById("agreed").checked = true;
+                    document.getElementById("main").classList.add("light");
+                    document.getElementsByClassName("login")[0].classList.add("login1");
+                    document.getElementsByClassName("innerDiv")[0].classList.add("innerDiv1");
+                    document.getElementsByClassName("one")[0].classList.add("one1");
+                    document.getElementsByClassName("two")[0].classList.add("two1");
+                    document.getElementsByClassName("text")[0].classList.add("text1");
+                    document.getElementsByClassName("mbtn")[0].classList.add("mbtn1");
+                    document.getElementsByClassName("mrbtn")[0].classList.add("mrbtn1");
+                    document.getElementById("text").innerText = "Light Mode";
+                } else {
+                    document.getElementById("agreed").checked = false;
+                }
+            </script>
+            <script src="public/particles.js"></script>
+            <script src="public/app.js"></script>
+</body>
+
+</html>

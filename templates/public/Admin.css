@@ -1,0 +1,190 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    font-family: 'Public Sans', sans-serif;
+}
+
+body {
+    overflow: hidden;
+    background: rgb(72, 74, 88);
+    background: linear-gradient(0deg, rgba(72, 74, 88, 1) 0%, rgba(72, 74, 88, 1) 100%);
+}
+
+main {
+    height: 100vh;
+    background: rgb(72, 74, 88);
+    background: linear-gradient(0deg, rgba(72, 74, 88, 1) 0%, rgba(72, 74, 88, 1) 100%);
+}
+
+
+/* main div {
+    color: antiquewhite;
+} */
+
+.innerDiv {
+    z-index: 1;
+    background: rgb(62, 66, 94);
+    background: linear-gradient(0deg, rgba(62, 66, 94, 0.35477941176470584) 0%, rgba(62, 66, 94, 0.3519782913165266) 100%);
+    border-top-right-radius: 60px;
+    border-bottom-left-radius: 60px;
+    /* box-shadow: -5px -5px 15px white; */
+    box-shadow: inset -5px -5px 10px rgb(248, 248, 248), inset 5px 5px 10px rgb(0, 0, 0), -5px -5px 10px rgb(248, 248, 248), 5px 5px 10px rgb(0, 0, 0);
+    /* box-shadow: ; */
+    /* background-color: transparent; */
+}
+
+input {
+    background-color: transparent;
+    outline: transparent;
+    width: 15rem;
+    height: 2rem;
+    padding-left: 3px;
+    color: white;
+    box-shadow: inset -1px -1px 4px rgb(248, 248, 248), inset 1px 1px 4px rgb(0, 0, 0), -1px -1px 4px rgb(248, 248, 248), 1px 1px 4px rgb(0, 0, 0);
+    border: none;
+}
+
+.one {
+    border-top-right-radius: 15px;
+}
+
+.zero {
+    border-top-right-radius: 15px;
+}
+
+.two {
+    border-bottom-left-radius: 15px;
+}
+
+::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: rgb(255, 255, 255);
+    opacity: 0.9;
+    /* Firefox */
+}
+
+.mbtn {
+    width: 10rem;
+    height: 2rem;
+    box-shadow: inset -1px -1px 4px rgb(248, 248, 248), inset 1px 1px 4px rgb(0, 0, 0), -1px -1px 4px rgb(248, 248, 248), 1px 1px 4px rgb(0, 0, 0);
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    background-color: transparent;
+    outline: transparent;
+    border: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.mbtn:hover {
+    box-shadow: inset 1px 1px 4px rgb(248, 248, 248), inset -1px -1px 4px rgb(0, 0, 0), 1px 1px 4px rgb(248, 248, 248), -1px -1px 4px rgb(0, 0, 0);
+}
+
+input:hover {
+    box-shadow: inset 1px 1px 4px rgb(248, 248, 248), inset -1px -1px 4px rgb(0, 0, 0), 1px 1px 4px rgb(248, 248, 248), -1px -1px 4px rgb(0, 0, 0);
+}
+
+.login {
+    font-size: 40px;
+}
+
+.my_img img {
+    width: 7rem;
+    height: 7rem;
+}
+
+.light {
+    /* background-color: rgb(255, 0, 0); */
+    /* background-color: transparent; */
+    background: rgb(202, 202, 202);
+    background: linear-gradient(0deg, rgb(202, 202, 202) 0%, rgb(202, 202, 202) 100%);
+}
+
+.login1 {
+    color: black;
+}
+
+.innerDiv1 {
+    background: rgb(189, 190, 196);
+    background: linear-gradient(0deg, rgba(189, 190, 196, 0.35477941176470584) 0%, rgba(189, 190, 196, 0.3519782913165266) 100%);
+    box-shadow: inset -5px -5px 10px rgb(255, 255, 255), inset 5px 5px 10px rgb(0, 0, 0), -5px -5px 10px rgb(255, 255, 255), 5px 5px 10px rgb(0, 0, 0);
+}
+
+.one1 {
+    color: black;
+}
+
+.zero1 {
+    color: black;
+}
+
+.two1 {
+    color: black;
+}
+
+.one1::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: rgb(0, 0, 0);
+    opacity: 0.9;
+    /* Firefox */
+}
+
+.zero1::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: rgb(0, 0, 0);
+    opacity: 0.9;
+    /* Firefox */
+}
+
+.two1::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: rgb(0, 0, 0);
+    opacity: 0.9;
+    /* Firefox */
+}
+
+.text1 {
+    color: black;
+}
+
+.mbtn1 {
+    color: black;
+}
+
+.mrbtn {
+    font-size: 13px;
+    padding: 0px 10px;
+    background-color: transparent;
+    border: 1px solid rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+}
+
+.mrbtn:hover {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+
+.mrbtn1 {
+    font-size: 13px;
+    padding: 0px 10px;
+    background-color: transparent;
+    border: 1px solid rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
+    border-radius: 10px;
+}
+
+.mrbtn1:hover {
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+#particles-js {
+    z-index: 0;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100vh;
+}
