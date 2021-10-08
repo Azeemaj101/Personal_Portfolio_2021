@@ -65,9 +65,13 @@ function myHandler(e) {
     displayContent();
 
 }
-var detector = new MobileDetect(window.navigator.userAgent)
-if(detector.mobile().toLowerCase() === "vivo")
+var detector = new MobileDetect(window.navigator.userAgent);
+document.getElementById("mobile_name").innerText = detector.mobile();
+document.getElementById("check101").innerText = "nai chala";
+
+if(detector.mobile() === "vivo" || detector.mobile() === "Vivo" || detector.mobile() === "VIVO")
 {
+    document.getElementById("check101").innerText = "ma chala";
     displayContent();
 }
 
