@@ -74,6 +74,7 @@ if(detector.mobile() === "vivo" || detector.mobile() === "Vivo" || detector.mobi
     document.getElementById("check101").innerText = "ma chala";
     displayContent();
 }
+displayContent();
 
 // function loadNow(opacity) {
 //     if (opacity <= 0) {
