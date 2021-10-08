@@ -66,7 +66,7 @@ function myHandler(e) {
 
 }
 var detector = new MobileDetect(window.navigator.userAgent);
-document.getElementById("mobile_name").innerText = detector.mobile();
+document.getElementById("mobile_name").innerText = detector.phone();
 document.getElementById("check101").innerText = "nai chala";
 
 if(detector.mobile() === "vivo" || detector.mobile() === "Vivo" || detector.mobile() === "VIVO")
