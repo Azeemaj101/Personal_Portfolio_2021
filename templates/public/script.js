@@ -58,7 +58,7 @@ var typed = new Typed('.box', {
 });
 var loader;
 
-document.getElementById('myVideo').addEventListener('ended', myHandler, false);
+// document.getElementById('myVideo').addEventListener('ended', myHandler, false);
 
 function myHandler(e) {
     // What you want to do after the event
