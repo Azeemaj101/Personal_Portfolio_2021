@@ -58,23 +58,13 @@ var typed = new Typed('.box', {
 });
 var loader;
 
-// document.getElementById('myVideo').addEventListener('ended', myHandler, false);
+document.getElementById('myVideo').addEventListener('ended', myHandler, false);
 
 function myHandler(e) {
     // What you want to do after the event
     displayContent();
 
 }
-var detector = new MobileDetect(window.navigator.userAgent);
-document.getElementById("mobile_name").innerText = detector.phone();
-document.getElementById("check101").innerText = "nai chala";
-
-if(detector.mobile() === "vivo" || detector.mobile() === "Vivo" || detector.mobile() === "VIVO")
-{
-    document.getElementById("check101").innerText = "ma chala";
-    displayContent();
-}
-displayContent();
 
 // function loadNow(opacity) {
 //     if (opacity <= 0) {
