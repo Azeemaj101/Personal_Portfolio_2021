@@ -65,6 +65,11 @@ function myHandler(e) {
     displayContent();
 
 }
+var detector = new MobileDetect(window.navigator.userAgent)
+if(detector.mobile().toLowerCase() === "vivo")
+{
+    displayContent();
+}
 
 // function loadNow(opacity) {
 //     if (opacity <= 0) {
