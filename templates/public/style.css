@@ -236,7 +236,7 @@ i {
     color: #ffffff;
     text-transform: uppercase;
     transition: 0.5s;
-    background: transparent;
+    background-color: #033bf43a;
     border: 1px solid #03e9f4;
     border-radius: 6px;
 }
@@ -333,6 +333,7 @@ i {
     align-items: center;
     display: none;
 }
+
 
 .inner_logo {
     border: 1px solid rgb(105, 162, 178);
