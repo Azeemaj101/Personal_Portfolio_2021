@@ -39,13 +39,12 @@ $(".navbar-toggler").click(function() {
 
 var typed = new Typed('.box', {
     strings: [
-        "CREATIVE DEVELOPER",
-        "Web Developer",
-        "Python Developer",
-        "JS Developer",
-        "JAVA Developer",
-        "Designer",
-        "Photographer"
+        "LOGIC DEVELOPER",
+        "WEB DEVELOPER",
+        "PYTHON DEVELOPER",
+        "JS DEVELOPER",
+        "ML DEVELOPER",
+        "DESIGNER"
     ],
     typeSpeed: 40,
     backspaceSpeed: 20,
@@ -58,24 +57,27 @@ var typed = new Typed('.box', {
 });
 var loader;
 
-document.getElementById('myVideo').addEventListener('ended', myHandler, false);
+loader = document.getElementById('myVideo');
+// document.getElementById('myVideo').addEventListener('ended', myHandler, false);
 
-function myHandler(e) {
-    // What you want to do after the event
-    displayContent();
+// function myHandler(e) {
+//     // What you want to do after the event
+//     displayContent();
 
-}
-
-// function loadNow(opacity) {
-//     if (opacity <= 0) {
-//         displayContent();
-//     } else {
-//         loader.style.opacity = opacity;
-//         window.setTimeout(function() {
-//             loadNow(opacity - 0.10);
-//         }, 300);
-//     }
 // }
+
+loadNow(5);
+function loadNow(opacity) {
+    console.log("Hello");
+    if (opacity <= 0) {
+        displayContent();
+    } else {
+        loader.style.opacity = opacity;
+        window.setTimeout(function() {
+            loadNow(opacity - 0.50);
+        }, 300);
+    }
+}
 var count1 = 0;
 
 function displayContent() {
