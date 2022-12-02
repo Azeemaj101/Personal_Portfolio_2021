@@ -18,6 +18,8 @@ mongoose.connect(`${DB}`, {
 }).catch((err) => {
     console.log("error: " + err);
 });
+
+
 const userData = new mongoose.Schema({
 
     views: {
