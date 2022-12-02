@@ -333,7 +333,7 @@ app.get("/updateForProject", (req, res) => {
 // Edit Pages Routing
 app.get("/projectEdit", (req, res) => {
     const d = new Date();
-    if (req.session.views == 1 || 1) {
+    if (req.session.views == 1) {
         res.render("projectEdit", {
             session: req.session,
             chk: 0,
