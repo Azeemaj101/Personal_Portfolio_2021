@@ -4,7 +4,7 @@ const path = require("path");
 const envpath = path.join(__dirname, "/config.env");
 dotenv.config({ path: envpath })
 
-const DB = 'mongodb+srv://azeemaj101:print(mongo27659199)@cluster0.lpbw8.mongodb.net/azeemaj101?retryWrites=true&w=majority';
+const DB = "mongodb+srv://azeemaj101:print(mongo27659199)@cluster0.lpbw8.mongodb.net/azeemaj101?retryWrites=true&w=majority";
 
 // mongoose.connect("mongodb://localhost:27017/Azeemaj101", {
 mongoose.connect(`${DB}`, {
